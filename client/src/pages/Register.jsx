@@ -19,10 +19,7 @@ export const Register = () => {
     e.preventDefault();
     try {
       console.log(formData);
-      const response = await axios.post(
-        "http://localhost:3000/api/auth/signup",
-        formData
-      );
+      const response = await axios.post("api/auth/signup", formData);
       console.log("Response:", response.data);
     } catch (error) {
       console.error("Error:", error);
