@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
-import Profile from "./pages/Profile";
-import Header from "./components/Header";
+import { Home, Register, Profile, Login} from "./pages";
+import TopBar from "./components/TopBar";
+
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <TopBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
